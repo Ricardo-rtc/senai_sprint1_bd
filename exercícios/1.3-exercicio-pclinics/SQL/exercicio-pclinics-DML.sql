@@ -18,7 +18,7 @@ VALUES ('Gato'),('Cachorro'),('Hamster');
 GO
 
 INSERT INTO RACA (idTipoPet,nomeRaca)
-VALUES ('2','Rottweiller'),('2','Pitbull'),('2','Pastor Alemão');
+VALUES ('2','Rottweiller'),('2','Pitbull'),('2','Pastor Alemï¿½o');
 GO
 
 INSERT INTO PET (idDono,idRaca,nomePet,dataNascimento)

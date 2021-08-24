@@ -14,7 +14,7 @@ VALUES ('1','Ricardo','rtc@email.com','1234','0'),('1','Saulo','saulo@email.com'
 GO
 
 INSERT INTO Album (idArtista,nomeAlbum,dataPostagem,visualizacaoOn)
-VALUES ('1','É proibido fumar','07/04/1964','1'),('2','Abbey Road','26/09/1069','1');
+VALUES ('1','ï¿½ proibido fumar','07/04/1964','1'),('2','Abbey Road','26/09/1069','1');
 GO
 
 INSERT INTO Estilo (idAlbum,nomeEstilo)
