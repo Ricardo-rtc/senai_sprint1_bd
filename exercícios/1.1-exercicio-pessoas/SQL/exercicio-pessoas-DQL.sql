@@ -1,0 +1,25 @@
+USE PESSOA;
+GO
+
+SELECT * FROM PESSOA;
+GO
+
+SELECT * FROM CNH;
+GO
+
+SELECT * FROM EMAIL;
+GO
+
+SELECT * FROM TELEFONE;
+GO
+
+SELECT nomePessoa, numeroTelefone, end_email, descricao
+FROM PESSOA
+LEFT JOIN TELEFONE
+ON PESSOA.idPessoa = TELEFONE.idPessoa
+LEFT JOIN EMAIL
+ON PESSOA.idPessoa = EMAIL.idPessoa
+LEFT JOIN CNH 
+ON PESSOA.idPessoa = CNH.idPessoa
+ORDER BY nomePessoa desc;
+GO

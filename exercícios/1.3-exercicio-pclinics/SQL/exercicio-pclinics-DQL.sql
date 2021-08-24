@@ -1,0 +1,63 @@
+USE PCLINICS;
+GO
+
+SELECT * FROM CLINICA;
+GO
+
+SELECT * FROM CONSULTA;
+GO
+
+SELECT * FROM DONO;
+GO
+
+SELECT * FROM PET;
+GO
+
+SELECT * FROM RACA;
+GO
+
+SELECT * FROM TIPOPET;
+GO
+
+SELECT * FROM VETERINARIO;
+GO
+
+SELECT nomeVeterinario , nomeClinica
+FROM VETERINARIO
+LEFT JOIN CLINICA
+ON VETERINARIO.idClinica = CLINICA.idClinica
+WHERE CLINICA.nomeClinica = 'Pedigree';
+GO
+
+
+SELECT * FROM Raca WHERE NomeRaca LIKE 'S%';
+GO
+
+SELECT * FROM Raca WHERE NomeRaca LIKE '%O';
+GO
+SELECT * FROM Raca WHERE NomeRaca LIKE '%N';
+GO
+
+SELECT nomePet, nomeDono
+FROM PET
+LEFT JOIN DONO 
+ON PET.idDono = DONO.idDono;
+GO
+
+SELECT nomeVeterinario, nomePet, nomeRaca, nomeTipoPet, nomeClinica, descricaoConsulta
+FROM CONSULTA
+LEFT JOIN VETERINARIO
+ON CONSULTA.idVeterinario = VETERINARIO.idVeterinario
+LEFT JOIN PET 
+ON CONSULTA.idPet = PET.idPet
+LEFT JOIN RACA
+ON PET.idRaca = RACA.idRaca
+LEFT JOIN TIPOPET
+ON RACA.idTipoPet = TIPOPET.idTipoPet
+LEFT JOIN DONO 
+ON PET.idDono = DONO.idDono
+LEFT JOIN CLINICA
+ON VETERINARIO.idClinica = CLINICA.idClinica;
+GO
+
+
